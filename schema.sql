@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS changes;
+
+CREATE TABLE posts (
+    id TEXT PRIMARY KEY NOT NULL,
+    updated_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL
+);
+
+CREATE TABLE changes (
+    id TEXT KEY NOT NULL,
+    updated_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    change_made TEXT NOT NULL
+);
